@@ -117,12 +117,20 @@ header a:focus {
 
 footer {
   background-color: #f2f2f2;
-  display: flex;
   min-height: 40px;
-  justify-content: space-between;
-  align-items: center;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+.footer__container {
   font-size: 14px;
+  display: flex;
+  align-items: center;
+  max-width: 680px;
   padding: 20px 40px;
+  justify-content: space-between;
+  margin: 0 auto;
 }
 
 footer a {
@@ -173,7 +181,6 @@ footer a:focus {
 
 .post__list,
 .post__detail {
-  min-height: 90vh;
   padding: 20px 20px;
   text-align: center;
   max-width: 680px;
@@ -388,6 +395,118 @@ footer a:focus {
   cursor: pointer;
 }
 
+/* comment */
+.comments {
+  width: 100%;
+  max-width: 680px;
+  margin: 0 auto;
+}
+.comments__form label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 6px;
+  margin-top: 20px;
+  font-size: 13px;
+}
+
+.comments .comment__area {
+  position: relative;
+  width: 100%;
+}
+.comment__writer {
+  border: 2px solid #cecece;
+  border-radius: 6px;
+}
+.comment__writer-inbox {
+  padding: 10px 10px 0 10px;
+}
+.comment__author,
+.comment__submit input {
+  color: #888;
+}
+
+.comments__form textarea {
+  border: none;
+  width: 100%;
+  min-height: 60px;
+  margin-top: 6px;
+  padding-top: 6px;
+  font-size: 16px;
+  line-height: 1.5;
+  border-radius: 0.3rem;
+  resize: none;
+  outline: none;
+  color: #444;
+}
+.comment__submit {
+  text-align: right;
+}
+.comment__submit input {
+  border: none;
+  background: none;
+  padding: 8px;
+  margin: 0 3px 3px 0;
+  cursor: pointer;
+}
+/* .comment__author {
+  position: absolute;
+  top: 18px;
+  left: 10px;
+  color: #666;
+  font-weight: 600;
+}
+.comment__btn--submit {
+  position: absolute;
+  bottom: 10px;
+  right: -10px;
+  border: none;
+  background-color: white;
+  color: #666;
+} */
+.comment__btn--submit:hover {
+  background-color: #e8e7e7;
+}
+
+/* .comments__list {
+  margin: 40px 100px;
+} */
+
+.comment__box {
+  padding: 12px 0px;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.comment__box:last-child {
+  border: none;
+}
+.comment__profile-box {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-size: 12px;
+}
+.comment__email {
+  font-weight: 500;
+}
+.comment__createdAt {
+  color: gray;
+}
+
+.comment__delete {
+  color: #666;
+  cursor: pointer;
+}
+.comment__delete:hover,
+.comment__delete:focus {
+  text-decoration: underline;
+  color: black;
+}
+.comment_text {
+  font-size: 14px;
+  padding: 10px 4px;
+  color: #777;
+}
+
 /* dark mode */
 .white {
   transition: all 0.25s linear;
@@ -421,7 +540,9 @@ footer a:focus {
 .dark .form__btn--submit:hover,
 .dark .form__btn--submit:focus,
 .dark .btn--submit:hover,
-.dark .btn--submit:focus {
+.dark .btn--submit:focus,
+.dark .comment__profile-box,
+.dark .comment_text {
   background: white;
   color: #222;
 }

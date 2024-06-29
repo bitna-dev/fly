@@ -1,4 +1,3 @@
-import Loader from '@components/Loader'
 import LoginForm from '@components/auth/LoginForm'
 
 const Login = () => {

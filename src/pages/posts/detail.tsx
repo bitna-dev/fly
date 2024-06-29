@@ -1,7 +1,11 @@
 import PostDetail from '@components/posts/PostDetail'
 
 const DetailPage = () => {
-  return <PostDetail />
+  return (
+    <>
+      <PostDetail />
+    </>
+  )
 }
 
 export default DetailPage

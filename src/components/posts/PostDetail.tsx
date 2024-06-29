@@ -8,6 +8,7 @@ import { deleteDoc, doc } from 'firebase/firestore'
 import { store } from '@remote/firebase'
 import { COLLECTIONS } from '@constants/index'
 import { toast } from 'react-toastify'
+import Comments from './Comments'
 
 const PostDetail = () => {
   const { id } = useParams() as { id: string }
@@ -62,6 +63,7 @@ const PostDetail = () => {
               </div>
             )}
           </div>
+          <Comments post={post} />
         </div>
       ) : (
         <Loader />

@@ -58,7 +58,7 @@ const Postbox = ({
         setData(data)
       })
     }
-  }, [getPosts])
+  }, [getPosts, defaultTap])
   return (
     <>
       {hasNavigation && (

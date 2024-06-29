@@ -1,7 +1,13 @@
-import React from 'react'
+import Profile from '@components/Profile'
+import Postbox from '@components/posts/Postbox'
 
 const ProfilePage = () => {
-  return <div>index</div>
+  return (
+    <>
+      <Profile />
+      <Postbox defaultTap="my" />
+    </>
+  )
 }
 
 export default ProfilePage

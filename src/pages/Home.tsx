@@ -1,22 +1,12 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import Carousel from '@components/Carousel'
+import Postbox from '@components/posts/Postbox'
 
 const Home = () => {
   return (
     <>
-      <header>
-        <div>
-          <Link to="/posts/new">글쓰기</Link>
-          <Link to="/">게시글</Link>
-          <Link to="/">프로필</Link>
-        </div>
-      </header>
-      <div className="post-list">post list</div>
-      <footer>
-        <div>Menu1</div>
-        <div>Menu2</div>
-        <div>Menu3</div>
-      </footer>
+      {/* post__navigation  */}
+      <Carousel />
+      <Postbox hasNavigation defaultTap="all" />
     </>
   )
 }

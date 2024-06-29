@@ -2,16 +2,23 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
 import App from './App'
+import 'react-toastify/dist/ReactToastify.css'
 import reportWebVitals from './reportWebVitals'
 import { BrowserRouter } from 'react-router-dom'
+import { ToastContainer } from 'react-toastify'
+import { AuthContextProvider } from '@contexts/AuthContext'
+import { ThemeContextProvider } from '@contexts/ThemeContext'
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 root.render(
-  <>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  </>,
+  <ThemeContextProvider>
+    <AuthContextProvider>
+      <BrowserRouter>
+        <ToastContainer autoClose={1500} />
+        <App />
+      </BrowserRouter>
+    </AuthContextProvider>
+  </ThemeContextProvider>,
 )
 
 // If you want to start measuring performance in your app, pass a function

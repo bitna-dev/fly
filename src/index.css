@@ -267,6 +267,9 @@ footer a:focus {
 }
 
 /* profile */
+.profile__container {
+  height: 100vh;
+}
 
 .profile__box {
   display: flex;
@@ -319,6 +322,7 @@ footer a:focus {
   margin: 0 auto;
   max-width: 680px;
   padding: 20px;
+  height: 100vh;
 }
 
 .form__block {
